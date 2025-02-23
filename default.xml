@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <remote  name="aosp"
-    fetch="https://android.googlesource.com/" revision="android-gs-pantah-6.1-android15-qpr2-beta" clone-depth="1" sync-j="4" />
+    fetch="https://android.googlesource.com/" />
+  <default revision="android-gs-pantah-6.1-android15-qpr2-beta"
+    remote="aosp" sync-j="4" />
   <project path="aosp" name="kernel/common" groups="partner" >
     <linkfile dest="common/build.config.constants" src="build.config.constants"/>
     <linkfile dest="common/modules.bzl" src="modules.bzl"/>
@@ -16,6 +18,10 @@
     <linkfile dest="build_gs101.sh" src="build_gs101.sh"/>
     <linkfile dest=".c1.bazelrc" src="device.bazelrc"/>
   </project>
+  <project path="private/devices/google/raviole" name="kernel/devices/google/raviole" groups="partner,raviole" >
+    <linkfile dest="build_raviole.sh" src="build_raviole.sh"/>
+    <linkfile dest=".d13.bazelrc" src="device.bazelrc"/>
+  </project>
   <project path="private/devices/google/bluejay" name="kernel/devices/google/bluejay" groups="partner,bluejay" >
     <linkfile dest="build_bluejay.sh" src="build_bluejay.sh"/>
     <linkfile dest=".d14.bazelrc" src="device.bazelrc"/>
@@ -27,6 +33,42 @@
   <project path="private/devices/google/pantah" name="kernel/devices/google/pantah" groups="partner,pantah" >
     <linkfile dest="build_pantah.sh" src="build_pantah.sh"/>
     <linkfile dest=".d1.bazelrc" src="device.bazelrc"/>
+  </project>
+  <project path="private/devices/google/lynx" name="kernel/devices/google/lynx" groups="partner,lynx" >
+    <linkfile dest="build_lynx.sh" src="build_lynx.sh"/>
+    <linkfile dest=".d15.bazelrc" src="device.bazelrc"/>
+  </project>
+  <project path="private/devices/google/felix" name="kernel/devices/google/felix" groups="partner,felix" >
+    <linkfile dest="build_felix.sh" src="build_felix.sh"/>
+    <linkfile dest=".d2.bazelrc" src="device.bazelrc"/>
+  </project>
+  <project path="private/devices/google/tangorpro" name="kernel/devices/google/tangorpro" groups="partner,tangorpro" >
+    <linkfile dest="build_tangorpro.sh" src="build_tangorpro.sh"/>
+    <linkfile dest=".d3.bazelrc" src="device.bazelrc"/>
+  </project>
+  <project path="private/devices/google/zuma" name="kernel/devices/google/zuma" groups="partner" >
+    <linkfile dest="build_zuma.sh" src="build_zuma.sh"/>
+    <linkfile dest=".c3.bazelrc" src="device.bazelrc"/>
+  </project>
+  <project path="private/devices/google/shusky" name="kernel/devices/google/shusky" groups="partner,shusky" >
+    <linkfile dest="build_shusky.sh" src="build_shusky.sh"/>
+    <linkfile dest=".d4.bazelrc" src="device.bazelrc"/>
+  </project>
+  <project path="private/devices/google/akita" name="kernel/devices/google/akita" groups="partner,akita" >
+    <linkfile dest="build_akita.sh" src="build_akita.sh"/>
+    <linkfile dest=".d5.bazelrc" src="device.bazelrc"/>
+  </project>
+  <project path="private/devices/google/zumapro" name="kernel/devices/google/zumapro" groups="partner" >
+    <linkfile dest="build_zumapro.sh" src="build_zumapro.sh"/>
+    <linkfile dest=".c4.bazelrc" src="device.bazelrc"/>
+  </project>
+  <project path="private/devices/google/caimito" name="kernel/devices/google/caimito" groups="partner,caimito" >
+    <linkfile dest="build_caimito.sh" src="build_caimito.sh"/>
+    <linkfile dest=".d7.bazelrc" src="device.bazelrc"/>
+  </project>
+  <project path="private/devices/google/comet" name="kernel/devices/google/comet" groups="partner,comet" >
+    <linkfile dest="build_comet.sh" src="build_comet.sh"/>
+    <linkfile dest=".d8.bazelrc" src="device.bazelrc"/>
   </project>
   <project path="private/google-modules/soc/gs" name="kernel/google-modules/soc/gs" groups="partner" />
   <project path="private/google-modules/amplifiers" name="kernel/google-modules/amplifiers" groups="partner" />
